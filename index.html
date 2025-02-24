@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XIIgems (@XIIgems) / X</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <img class="qr-code" src="https://www.xpandk.com/XIIgems/qr-code.png" alt="QR code for Bitcoin Invoice" />
+    <div class="invoice-label">Bitcoin Invoice</div>
+    <div class="bitcoin-invoice">
+      <div class="invoice-text" data-address="bc1qmqq3etecyxtv02fe2m4ycvud9pwpevv5y52twj">
+        bc1qmqq3etecyxtv02fe2<span class="mobile-break"><br></span>m4ycvud9pwpevv5y52twj
+      </div>
+      <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+    </div>
+    <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://www.dropbox.com/s/yourfile/tokenomics.pdf">Tokenomics Paper</a>
+    <p><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://x.com/XIIgems">𝕏</a></p>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <p class="warning">We only post on 𝕏 — other channels, including Telegram and Discord, are all scams.</p>
+    </div>
+  </footer>
+  <script>
+    function copyToClipboard(btn) {
+      const address = document.querySelector('.invoice-text').dataset.address;
+      navigator.clipboard.writeText(address).then(() => {
+        void btn.offsetWidth;
+        btn.classList.add('jump');
+        setTimeout(() => btn.classList.remove('jump'), 300);
+      });
+    }
+  </script>
+</body>
+</html>
