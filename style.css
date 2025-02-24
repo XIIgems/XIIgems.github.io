@@ -1,0 +1,116 @@
+body {
+  background-color: #15202B;
+  font-family: Roboto, sans-serif;
+  color: #d9d9d9;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  margin-bottom: 60px;
+  animation: fadeIn 1s ease-in;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.qr-code {
+  width: 222px;
+  height: 222px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+.invoice-label {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.bitcoin-invoice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+.invoice-text {
+  font-family: monospace;
+  font-size: 15px;
+  background-color: #192734;
+  border: 1px solid #253341;
+  padding: 15px 25px;
+  border-radius: 5px;
+  word-break: break-all;
+  text-align: center;
+  display: inline-block;
+}
+.copy-button {
+  background-color: #1da1f2;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+@keyframes jump {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+.copy-button.jump {
+  animation: jump 300ms ease;
+}
+.external-link {
+  color: #1da1f2;
+  text-decoration: none;
+  font-size: 15px;
+}
+.external-link:hover {
+  text-decoration: underline;
+  color: #1a91da;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #192734;
+  border-top: 1px solid #253341;
+  text-align: center;
+  padding: 10px 0;
+}
+.footer-content {
+  padding: 0 13%;
+}
+footer .warning {
+  color: #a0a0a0;
+  font-size: 12px;
+  margin: 0;
+}
+@media (max-width: 600px) {
+  main {
+    padding: 13%;
+  }
+}
+@media (max-width: 300px) {
+  .qr-code {
+    width: 100%;
+    height: auto;
+  }
+}
+.mobile-break {
+  display: none;
+}
+@media (max-width: 600px) {
+  .mobile-break {
+    display: inline;
+  }
+}
