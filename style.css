@@ -1,5 +1,5 @@
 body {
-  background-color: #15202B;
+  background-color: #003049;
   font-family: Roboto, sans-serif;
   color: #d9d9d9;
   margin: 0;
@@ -52,7 +52,7 @@ main {
   display: inline-block;
 }
 .copy-button {
-  background-color: #1da1f2;
+  background-color: #f77f00;
   color: #fff;
   border: none;
   padding: 5px 10px;
@@ -69,7 +69,7 @@ main {
   animation: jump 300ms ease;
 }
 .external-link {
-  color: #1da1f2;
+  color: #f77f00;
   text-decoration: none;
   font-size: 15px;
 }
