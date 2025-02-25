@@ -29,10 +29,16 @@
     function copyToClipboard(btn) {
       const address = document.querySelector('.invoice-text').dataset.address;
       navigator.clipboard.writeText(address).then(() => {
+        btn.textContent = "Copied!";
         void btn.offsetWidth;
         btn.classList.add('jump');
-        setTimeout(() => btn.classList.remove('jump'), 300);
-      });
+        setTimeout(() => {
+          btn.classList.remove('jump');
+        }, 300);
+        setTimeout(() => {
+          btn.textContent = "Copy";
+        }, 3000);
+     });
     }
   </script>
 </body>
