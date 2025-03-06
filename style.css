@@ -23,8 +23,8 @@ main {
   to { opacity: 1; }
 }
 .qr-code {
-  width: 222px;
-  height: 222px;
+  width: 512px;
+  height: 512px;
   border-radius: 8px;
   margin-bottom: 30px;
 }
